@@ -23,13 +23,17 @@
     </nav>
 
     <div class="index_hero">
-        <img id="index_hero_image" src="imagens/heroImg.png">
+        
+        
         <div class="index_container">
-            <header>Explore Others Lists</header>
+            <header>Explore Game Lists</header>
             <p>Discover what other people think about all types of games</p>
             <button class="index_explore">
                 Explore <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+        </div>
+        <div class="index_img">
+            <img id="index_hero_image" src="imagens/heroImg.png">
         </div>
         
     </div>
