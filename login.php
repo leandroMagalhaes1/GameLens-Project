@@ -9,41 +9,62 @@
 </head>
 <body>
 
+<nav class="index_navbar">
+        <div class="index_navdiv">
+            <ul class="index_nav_list_logo">
+                <li><div class="index_nav_logo"><a href="index.php"><img src="imagens/LogoGameLensNav.png"></a></div></li>
+                <li><a class="index_nav_list_elements" href="index.php"><span class="span_logo">GameLens</span></a></li>
+            </ul>
+            <div class="index_nav_list">
+                <a class="index_nav_list_elements" id="index_nav_list_element_yourlist" href="#">Your List <i class="fa-solid fa-scroll"></i></a>
+                <a class="index_nav_list_elements" id="index_nav_list_element_yourlist" href="#">Games <i class="fa-solid fa-gamepad"></i></a>
+                <a class="index_nav_list_elements" id="index_nav_list_element_yourlist" href="login.php">Login <i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+</nav>
 
+<div class="wrapper">
     <div class="container">
             <div class="login_header">
                 <div class="logo_header">
                     <img id="logoimg" src="imagens/LogoGameLensNav.png">
                     <span id="span_nameLogo">GameLens</span>
+                    
                 </div>
-                <p id="login_text">Login</pi>
+                
+                <p id="login_text">Inicie sessão</p>
             </div>
 
             <div class="login_box">
+            
             <form action="#"></form>
                 <div class="login_data">
                     <div class="login_data_username">
-                        <span class="userIcon"><i class="fa-solid fa-user"></i></span>
-                        <input type="text" name="login_username" placeholder="username">
+                        
+                        <input class="login_input" type="text" name="login_username" placeholder="username">
+                        <label class="userIcon"><i class="fa-solid fa-user"></i></label>
                     </div>
 
                     <div class="login_data_password">
-                        <span class="userIcon"><i class="fa-solid fa-lock"></i></span>
-                        <input type="text" name="login_password" placeholder="password">
+                        
+                        <input class="login_input" type="text" name="login_password" placeholder="password">
+                        <label class="userIcon"><i class="fa-solid fa-lock"></i></label>
                     </div>
                 </div>
 
                 <div class="login_noAcc">
-                    <a href="#">Criar conta</a>
+                    <label>Não tem conta?</label>
+                    <a href="#">Crie já!</a>
                 </div>
 
                 <div class="login_button">
                     <button id="login_button_id" type="submit">Login</button>
                 </div>
-
-            </div>
             </form>
+            </div>
+            
+            </div>
     </div>
-
+</div>
 </body>
 </html>

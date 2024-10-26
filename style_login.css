@@ -31,6 +31,16 @@ img, picture, svg, video{
 /*
 Reseting the css
 */
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(0px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
 
 body{
     background-color: var(--color-primary);
@@ -45,12 +55,87 @@ body{
     src: url(fonts/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
 }
 
-.container{
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 85vh; /* Full viewport height */
+}
+
+.index_navbar{
+    background-color: var(--color-secondary);
+}
+
+/* Nav bar */ 
+
+.index_nav_logo{
+    width: 10rem;
+    height: auto;
+    padding-left: 6rem;
+    
+}
+
+.index_navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.index_nav_list_logo{
+    display:inline-flex;
+    list-style: none;
+    font-size: 2rem;
+    align-items: center;
+    
+}
+
+.index_nav_list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 6rem;
+    font-size:  1.5rem;
+}
+
+.span_logo{
+    font-family: SpaceGrotesk;
+    font-size: 2rem;
+}
+
+#index_nav_list_element_yourlist:hover{
+    background-color: hsla(197, 49%, 90%, 0.893);
+    color: var(--color-secondary);
+}
+
+.index_nav_list_elements{
+    font-family: Inter;
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    transition: background-color 0.5s;  
+    
+}
+#index_nav_list_element_yourlist{
+    margin: 0.75rem;
+}
+
+/* Nav bar */
+
+.container {
+    display: flex;
     flex-direction: column;
-    border: 3px solid red;
+    width: 50%;
+    max-width: 24rem;
+    padding: 1.25rem;
+    border: 0.10rem solid var(--color-secondary);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    background-color: rgb(160, 203, 220);
+    border-radius: 8px;
+    animation: fade-down 1s
 }
 
 .logo_header{
@@ -58,14 +143,14 @@ body{
     justify-content: center;
     align-items:center;
     flex-direction: row;
-    
+    margin-bottom: 2rem;
 }
 
 .login_header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     margin-bottom: 2rem;
 }
 
@@ -73,51 +158,88 @@ body{
     width: 20rem;
     height: auto;
     font-size: 1.2rem; 
+    font-family: Inter;
+    
+}
+
+.login_box_animation, .login_box{
+    opacity: 0;
+    animation: fade-down 1s ease-in-out 0.75s forwards;
 }
 
 .login_data_username,.login_data_password{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 0.75rem;
 }
-
 
 .login_data .userIcon {
     font-size: 1.5rem; /* Aumenta o tamanho dos ícones */
 }
 
 .login_data input[type="text"] {
-    font-size: 1.2rem; /* Aumenta o tamanho do texto no campo de input */
-    padding: 10px; /* Aumenta o espaço dentro do input */
-    width: 100%; /* Ajuste conforme necessário */
+    font-size: 1.25rem; /* Aumenta o tamanho do texto no campo de input */
+    padding: 0.25rem; /* Aumenta o espaço dentro do input */
+    width: 90%;/* Ajuste conforme necessário */
+    background-color: rgb(160, 203, 220);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: Inter;
+    outline: none;
 }
 
-.login_button, .login_noAcc{
+.login_noAcc{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Inter;
+}
+
+.login_button{
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
 #login_button_id{
+    font-family: Inter;
     margin-top: 0.25rem;
     padding: 0.25rem;
-    width: 100%;
-    border-radius: 12px;
+    width: 40%;
+    border: 2px solid;
+    border-radius: 32px;
+    color: var(--color-primary);
+    background-color: var(--color-tertiary);
+    border-color: var(--color-tertiary);
+    transition: 0.5s;
 }
 
 #login_text{
-    font-size: 3rem;
+    font-family: Inter;
+    font-size: 2rem;
+    color: var(--color-secondary);
 }
 
 #logoimg{
-    width: 10rem;
+    width: 4rem;
     height: auto;
-    padding-left: 6rem;
+    
 }
 
 #span_nameLogo{
-    font-size: 2rem;
+    font-family: SpaceGrotesk;
+    font-size: 1.75rem;
+}
+
+#login_button_id:hover{
+    background-color: var(--color-primary);
+    color:var(--color-secondary);
+    border-color: var(--color-tertiary);
+    cursor: pointer;
 }
 
