@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>sign up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="style_login.css">
 </head>
@@ -32,7 +32,7 @@
                     
                 </div>
                 
-                <p id="login_text">Inicie sessão</p>
+                <p id="login_text">Cria a tua conta</p>
             </div>
 
             <div class="login_box">
@@ -41,24 +41,29 @@
                 <div class="login_data">
                     <div class="login_data_username">
                         
-                        <input class="login_input" type="text" name="login_username" placeholder="username">
+                        <input class="login_input" type="text" name="signup_username" placeholder="username">
                         <label class="userIcon"><i class="fa-solid fa-user"></i></label>
                     </div>
 
                     <div class="login_data_password">
                         
-                        <input class="login_input" type="text" name="login_password" placeholder="password">
+                        <input class="login_input" type="text" name="signup_password" placeholder="password">
+                        <label class="userIcon"><i class="fa-solid fa-lock"></i></label>
+                    </div>
+                    <div class="login_data_password">
+                        
+                        <input class="login_input" type="text" name="signup_confirmPassword" placeholder="confirma a password">
                         <label class="userIcon"><i class="fa-solid fa-lock"></i></label>
                     </div>
                 </div>
 
                 <div class="login_noAcc">
-                    <label>Não tem conta?</label>
-                    <a href="signup.php">Crie agora!</a>
+                    <label>Já tem conta?</label>
+                    <a href="login.php">Inicie sessão</a>
                 </div>
 
                 <div class="login_button">
-                    <button id="login_button_id" type="submit">Login</button>
+                    <button id="login_button_id" type="submit">Registar</button>
                 </div>
             </form>
             </div>
