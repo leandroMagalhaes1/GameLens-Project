@@ -146,49 +146,13 @@ body{
     margin-bottom: 2rem;
 }
 
-.login_header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    margin-bottom: 2rem;
-}
-
-.login_data{
-    width: 20rem;
-    height: auto;
-    font-size: 1.2rem; 
-    font-family: Inter;
-    
-}
-
 .login_box_animation, .login_box{
     opacity: 0;
     animation: fade-down 1s ease-in-out 0.75s forwards;
 }
 
-.login_data_username,.login_data_password{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-}
-
 .login_data .userIcon {
     font-size: 1.5rem; /* Aumenta o tamanho dos ícones */
-}
-
-.login_data input[type="text"] {
-    font-size: 1.25rem; /* Aumenta o tamanho do texto no campo de input */
-    padding: 0.25rem; /* Aumenta o espaço dentro do input */
-    width: 90%;/* Ajuste conforme necessário */
-    background-color: rgb(160, 203, 220);
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    font-family: Inter;
-    outline: none;
 }
 
 .login_noAcc{
