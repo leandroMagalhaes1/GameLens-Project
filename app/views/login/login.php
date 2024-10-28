@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="css/style_login.css">
 </head>
 <body>
 
 <nav class="index_navbar">
         <div class="index_navdiv">
             <ul class="index_nav_list_logo">
-                <li><div class="index_nav_logo"><a href="index.php"><img src="imagens/LogoGameLensNav.png"></a></div></li>
+                <li><div class="index_nav_logo"><a href="index.php"><img src="images/LogoGameLensNav.png"></a></div></li>
                 <li><a class="index_nav_list_elements" href="index.php"><span class="span_logo">GameLens</span></a></li>
             </ul>
             <div class="index_nav_list">
@@ -27,7 +27,7 @@
     <div class="container">
             <div class="login_header">
                 <div class="logo_header">
-                    <img id="logoimg" src="imagens/LogoGameLensNav.png">
+                    <img id="logoimg" src="images/LogoGameLensNav.png">
                     <span id="span_nameLogo">GameLens</span>
                     
                 </div>

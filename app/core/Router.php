@@ -3,45 +3,41 @@
 
 class Router {
     public function dispatch($url) {
-        // Remove leading/trailing slashes and sanitize the URL
+        // Remove slashes no início e no final da URL
         $url = trim($url, '/');
     
-        // Define default controller and action
-        $controllerName = 'HomeController';
-        $action = 'index';
-    
-        // Parse URL into components
+        // Divide a URL em partes
         $urlParts = explode('/', $url);
     
-        // If the first part is your project name, skip it
-        if (count($urlParts) > 3) {
-            // Map the first part after the project name to a controller
-            $controllerName = ucfirst($urlParts[3]) . 'Controller';
+        // Define o nome do controlador padrão
+        if (!empty($urlParts[0])) {
+            $controllerName = ucfirst($urlParts[0]) . 'Controller';
+        } else {
+            $controllerName = 'HomeController';
         }
     
-        // Map the second part to an action if it exists
-        if (isset($urlParts[3])) {
-            $action = $urlParts[3];
+        // Define a ação padrão
+        if (!empty($urlParts[1])) {
+            $action = $urlParts[1];
+        } else {
+            $action = 'index';
         }
-        
-        // Check if the controller class exists
+    
+        // Verifica se o arquivo do controlador existe
         if (file_exists("../app/controllers/$controllerName.php")) {
-            require_once "../app/controllers/$controllerName.php";
-            
-            // Instantiate the controller
+            require_once "../app/controllers/$controllerName.php"; // Inclui o controlador
+    
+            // Cria uma instância do controlador
             $controller = new $controllerName();
     
-            // Check if the specified action method exists in the controller
+            // Verifica se a ação existe no controlador
             if (method_exists($controller, $action)) {
-                // Call the action method
-                $controller->$action();
+                $controller->$action(); // Chama o método da ação
             } else {
-                // Action not found, show 404 page
-                $this->error404();
+                $this->error404(); // Ação não encontrada, exibe 404
             }
         } else {
-            // Controller not found, show 404 page
-            $this->error404();
+            $this->error404(); // Controlador não encontrado, exibe 404
         }
     }
     
