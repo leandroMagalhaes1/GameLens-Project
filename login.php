@@ -12,13 +12,13 @@
 <nav class="index_navbar">
         <div class="index_navdiv">
             <ul class="index_nav_list_logo">
-                <li><div class="index_nav_logo"><a href="/home"><img src="images/LogoGameLensNav.png"></a></div></li>
-                <li><a class="index_nav_list_elements" href="/home"><span class="span_logo">GameLens</span></a></li>
+                <li><div class="index_nav_logo"><a href="index.php"><img src="images/LogoGameLensNav.png"></a></div></li>
+                <li><a class="index_nav_list_elements" href="index.php"><span class="span_logo">GameLens</span></a></li>
             </ul>
             <div class="index_nav_list">
                 <a class="index_nav_list_elements" id="index_nav_list_element_yourlist" href="#">Your List <i class="fa-solid fa-scroll"></i></a>
                 <a class="index_nav_list_elements" id="index_nav_list_element_yourlist" href="#">Games <i class="fa-solid fa-gamepad"></i></a>
-                <a class="index_nav_list_elements" id="index_nav_list_element_yourlist" href="/login">Login <i class="fa-solid fa-user"></i></a>
+                <a class="index_nav_list_elements" id="index_nav_list_element_yourlist" href="login.php">Login <i class="fa-solid fa-user"></i></a>
             </div>
         </div>
 </nav>
@@ -54,7 +54,7 @@
 
                 <div class="login_noAcc">
                     <label>Não tem conta?</label>
-                    <a href="/signup">Crie agora!</a>
+                    <a href="signup.php">Crie agora!</a>
                 </div>
 
                 <div class="login_button">
